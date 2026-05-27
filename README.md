@@ -76,3 +76,7 @@ Ransomware techniques addressed in this research map to:
 ---
 
 ## Repository Contents
+├── paper/          → Full research paper (AIT 682)
+├── research/       → Detection method analysis and study summary
+├── model/          → Hybrid model architecture and detection logic
+└── references/     → Annotated bibliography of 20 surveyed papers
