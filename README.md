@@ -7,25 +7,33 @@
 
 ## Overview
 
-This research analyzes the evolution of ransomware detection methodologies and proposes a hybrid detection model that combines signature-based and machine learning-driven behavioral analysis to address the shortcomings of standalone approaches.
+Ransomware has moved from opportunistic attacks to coordinated, targeted campaigns. 
+LockBit 3.0 disrupted global logistics and healthcare networks throughout 2023. 
+BlackCat/ALPHV brought down Change Healthcare in 2024, impacting 100+ million patient 
+records. WannaCry and the Colonial Pipeline attack demonstrated how a single intrusion 
+can cascade across critical infrastructure.
 
-The study surveyed 20+ ransomware detection research papers across three core detection paradigms and synthesized findings into a multi-stage hybrid detection framework.
+What these incidents share — the detection systems in place failed to catch novel 
+variants early enough. This research examines why, and proposes a hybrid detection 
+model that addresses the core gap.
+
+I reviewed 20+ ransomware detection studies across three methodologies — 
+signature-based, behavioral, and machine learning — and found a consistent pattern: 
+no single approach handles both known variants and zero-day threats without trading 
+off real-time performance or false positive rates.
 
 ---
 
 ## Research Problem
 
-Traditional signature-based detection methods fail against:
-- Zero-day ransomware variants
-- Polymorphic and evolving ransomware strains
-- Ransomware-as-a-Service (RaaS) platforms with rapid mutation cycles
+The three failure points that existing detection systems don't solve together:
 
-Machine learning approaches alone suffer from:
-- High false positive rates
-- Real-time detection latency
-- Large labeled dataset requirements
-
----
+- **Signature-based methods** fail against new and polymorphic variants — LockBit 
+  alone has released multiple versions specifically designed to evade signature databases
+- **Behavior-based methods** generate excessive false positives when legitimate 
+  processes mirror ransomware activity (mass file operations, encryption tasks)
+- **ML models** struggle with real-time detection and require large labeled datasets 
+  that rarely reflect the latest ransomware families
 
 ## Proposed Hybrid Detection Model
 
