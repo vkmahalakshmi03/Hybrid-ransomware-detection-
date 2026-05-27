@@ -80,3 +80,18 @@ Ransomware techniques addressed in this research map to:
 ├── research/       → Detection method analysis and study summary
 ├── model/          → Hybrid model architecture and detection logic
 └── references/     → Annotated bibliography of 20 surveyed papers
+
+---
+
+## Skills Demonstrated
+
+`Threat Analysis` · `MITRE ATT&CK` · `Machine Learning in Security` · `Security Research` · `Incident Detection` · `Behavioral Analysis` · `SIEM-aligned Detection Logic`
+
+---
+
+## Academic Context
+
+- **Course:** AIT 682 – Network and Systems Security  
+- **Institution:** George Mason University  
+- **Advisor:** Dr. Kun Sun  
+- **Year:** 2025
