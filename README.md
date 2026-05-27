@@ -60,13 +60,12 @@ The model operates in three stages:
 | **Hybrid (Proposed)** | **Comprehensive coverage, lower FP rate** | **Complexity of integration** |
 
 ---
-
 ## Key Findings
 
-- Hybrid models outperform standalone detection methods in detection rate and false positive reduction
-- ML-based behavioral analysis (Random Forest, Gradient Boosting) effectively captures novel ransomware patterns
-- Signature-based scanning provides a low-cost first filter, reducing ML model load
-- Architecture is scalable for cloud-based enterprise environments
+- No single detection method closed all three gaps simultaneously — that was the consistent finding across all 20+ papers reviewed
+- Signature scanning as a first-pass filter meaningfully reduces the load on ML models without sacrificing speed
+- Random Forest and Gradient Boosting outperformed deep learning for real-time use — lower compute cost, comparable accuracy
+- The ensemble decision layer (flag if either method triggers) was the critical design choice — it trades a small false positive increase for a significant drop in missed detections
 
 ---
 
@@ -97,9 +96,11 @@ Ransomware techniques addressed in this research map to:
 
 ---
 
-## Academic Context
+## What I Found Interesting
 
-- **Course:** AIT 682 – Network and Systems Security  
-- **Institution:** George Mason University  
-- **Advisor:** Dr. Kun Sun  
-- **Year:** 2025
+The deeper I got into the literature, the clearer it became that most detection research 
+optimizes for one metric — usually accuracy — without accounting for the operational 
+environment it would run in. A model with 98% accuracy that adds 800ms latency per file 
+is unusable in an enterprise endpoint context. The hybrid approach isn't just technically 
+stronger — it's the only design that holds up when you think about it as something that 
+actually has to run at scale.
