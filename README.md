@@ -1,7 +1,7 @@
 # Hybrid Ransomware Detection: A Survey of Current Technologies
 
-**Research Project | George Mason University | AIT 682 – Network and Systems Security**  
-**Author:** Mahalakshmi Karthikeyan
+**Author:** Mahalakshmi Karthikeyan  
+**Focus Area:** Security Operations · Threat Detection · Endpoint Security
 
 ---
 
@@ -89,10 +89,13 @@ Ransomware techniques addressed in this research map to:
 └── references/     → Annotated bibliography of 20 surveyed papers
 
 ---
+## Relevance to Security Operations
 
-## Skills Demonstrated
-
-`Threat Analysis` · `MITRE ATT&CK` · `Machine Learning in Security` · `Security Research` · `Incident Detection` · `Behavioral Analysis` · `SIEM-aligned Detection Logic`
+The detection logic in this model maps directly to SOC workflows — signature matching 
+aligns with IOC-based alerting in SIEM platforms like Splunk and Sentinel, while the 
+behavioral layer reflects the kind of anomaly detection rules written for endpoint 
+telemetry. The ensemble decision structure mirrors how tiered alert triage works in 
+practice.
 
 ---
 
